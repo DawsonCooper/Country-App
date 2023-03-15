@@ -1,4 +1,4 @@
-const logReducer = (state={}, action) => {
+export default function logReducer(state={}, action) {
     switch (action.type){
         case 'LOG':
             return Object.assign({}, state, {logged: true, name: action.name})
@@ -6,4 +6,3 @@ const logReducer = (state={}, action) => {
             return state
     }
 }
-export default logReducer
